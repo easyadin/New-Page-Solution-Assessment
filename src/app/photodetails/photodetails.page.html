@@ -1,0 +1,17 @@
+<ion-header class="header ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-slides pager="false" [options]="slideOpts" #guideStepSlide>
+    <ion-slide *ngFor="let photo of AllPhotos">
+      <ion-img [src]="photo" class="selectedImage"></ion-img>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>

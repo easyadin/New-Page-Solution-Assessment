@@ -1,0 +1,16 @@
+.selectedImage {
+  height: 100vh;
+  width: 100vw;
+  object-fit: contain;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+
+  * {
+    background: transparent;
+    ion-background-color: transparent;
+    --ion-background-color: transparent;
+  }
+}
