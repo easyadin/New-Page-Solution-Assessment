@@ -1,7 +1,7 @@
 # New-Page-Solution-Assessment
 New Page solution Asessment 
 
-The reposition is a solution to an assessment for Angular-Ionic Developer position at NewPage Solutions.
+The repository is a solution to an assessment for Angular-Ionic Developer position at NewPage Solutions.
 
 
 # TO RUN THE APP
