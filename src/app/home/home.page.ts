@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Platform } from '@ionic/angular';
 import { Subscription } from 'rxjs';
 import { PhotoService } from '../services/photoservice.service';
 
@@ -8,14 +9,14 @@ import { PhotoService } from '../services/photoservice.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit, OnDestroy {
-  constructor(private PhotoService: PhotoService) { }
+  constructor(private PhotoService: PhotoService, private Platform: Platform) { }
 
   AllPhotos: any[]; // holds all photos
   displayPhotos: any[];
 
   photoSub: Subscription;
 
-  displayLimit = 5; // the maximum list of images to show at initial stage
+  displayLimit = this.Platform.is('desktop') ? 20 : 5; // the maximum list of images to show at initial stage
 
   ngOnInit(): void {
     // fetch images
